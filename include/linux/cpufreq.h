@@ -529,7 +529,8 @@ static inline unsigned long cpufreq_scale(unsigned long old, u_int div,
  * within the limits is used. If (cpufreq_driver->setpolicy> exists, these
  * two generic policies are available:
  */
-#define CPUFREQ_POLICY_SCHEDUTIL	(1)
+#define CPUFREQ_POLICY_POWERSAVE	(1)
+#define CPUFREQ_POLICY_PERFORMANCE	(2)
 
 /*
  * The polling frequency depends on the capability of the processor. Default
