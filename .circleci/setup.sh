@@ -12,21 +12,21 @@ gsc() {
 	git clone --depth=1 -q $@
 }
 
-# Clone Neutron Clang
-# echo "Downloading Neutron Clang"
-# mkdir "$BASE_DIR"/clang
-# TC_DIR="$BASE_DIR"/clang
-# cd $TC_DIR
-# bash <(curl -s https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman) -S=latest
-# echo "$(pwd)"
-# cd ../..
+Clone Neutron Clang
+echo "Downloading Neutron Clang"
+mkdir "$BASE_DIR"/clang1
+TC1_DIR="$BASE_DIR"/clang1
+cd $TC1_DIR
+bash <(curl -s https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman) -S=latest
+echo "$(pwd)"
+cd ../..
 
 # Clone Neutron Clang
 echo "Downloading LyN-clang"
-mkdir "$BASE_DIR"/clang
-TC_DIR="$BASE_DIR"/clang
-git clone https://gitlab.com/lynnnnzx/clang-lyn.git $TC_DIR
-cd $TC_DIR
+mkdir "$BASE_DIR"/clang2
+TC2_DIR="$BASE_DIR"/clang2
+git clone https://gitlab.com/lynnnnzx/clang-lyn.git $TC2_DIR
+cd $TC2_DIR
 echo "$(pwd)"
 cd ../..
 
@@ -46,7 +46,7 @@ gsc https://github.com/ghostrider-reborn/AnyKernel3.git -b lisa $AK3_DIR
 echo "AnyKernel3 Completed"
 
 # Exports
-export  BASE_DIR TC_DIR KERNEL_SRC OUTPUT AK3_DIR BNAME BREV BRANCH TELEGRAM
+export  BASE_DIR TC1_DIR TC2_DIR KERNEL_SRC OUTPUT AK3_DIR BNAME BREV BRANCH TELEGRAM
 
 # Copy script over to source
 cd $KERNEL_SRC
