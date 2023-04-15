@@ -22,7 +22,7 @@ gsc() {
 # cd ../..
 
 # Clone Neutron Clang
-echo "Downloading Neutron Clang"
+echo "Downloading LyN-clang"
 mkdir "$BASE_DIR"/clang
 TC_DIR="$BASE_DIR"/clang
 git clone https://gitlab.com/lynnnnzx/clang-lyn.git $TC_DIR
