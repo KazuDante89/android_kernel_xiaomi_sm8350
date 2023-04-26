@@ -91,6 +91,7 @@ modules.order
 !.gitattributes
 !.gitignore
 !.mailmap
+!.circleci
 
 #
 # Generated include files
@@ -158,3 +159,4 @@ arch/arm/boot/dts/vendor
 #Ignoring Android.bp link file
 #
 Android.bp
+regen.sh
