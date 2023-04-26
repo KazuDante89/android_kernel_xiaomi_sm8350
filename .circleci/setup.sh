@@ -22,17 +22,17 @@ echo "$(pwd)"
 cd ../..
 
 # Clone Neutron Clang
-echo "Downloading LyN-clang"
+echo "Downloading Clang r450784d"
 mkdir "$BASE_DIR"/clang2
 TC2_DIR="$BASE_DIR"/clang2
-git clone https://gitlab.com/lynnnnzx/clang-lyn.git $TC2_DIR
+gsc https://gitlab.com/ImSurajxD/clang-r450784d.git $TC_DIR
 cd $TC2_DIR
 echo "$(pwd)"
 cd ../..
 
 # Clone Kernel Source
 BRANCH="R0.1"
-echo "Downloading Electron_$BRANCH Kernel Source"
+echo "Downloading Proton_$BRANCH Kernel Source"
 mkdir $BASE_DIR/Kernel
 KERNEL_SRC="$BASE_DIR"/Kernel
 OUTPUT="$KERNEL_SRC"/out

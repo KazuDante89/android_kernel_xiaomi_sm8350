@@ -53,8 +53,8 @@ CI="Circle CI"
 PROCS="$(nproc --all)"
 COMMIT_HEAD=$(git log --oneline -1)
 KV=$(make $MAKE_PARAMS1 kernelversion)
-KBUILD_COMPILER_STRING=$("$TC1_DIR"/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
-export PATH="$TC1_DIR/bin:$PATH"
+KBUILD_COMPILER_STRING=$("$TC2_DIR"/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
+export PATH="$TC2_DIR/bin:$PATH"
 export CI_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 ##----------------------------------------------------------##
@@ -74,14 +74,14 @@ DEFCONFIG="vendor/lahaina-qgki_defconfig vendor/xiaomi_QGKI.config vendor/lisa_Q
 DEFREGENED="out/.config"
 MAIN_DEF="arch/arm64/configs/vendor/lahaina-qgki_defconfig"
 
-BLDV="v0.0.0"
+BLDV="v0.0.1"
 ZIPNAME="Proton_$BRANCH-$BLDV.zip"
 
 MAKE_PARAMS="O=out ARCH=arm64 CC=clang CLANG_TRIPLE=aarch64-linux-gnu- LLVM=1 LLVM_IAS=1 \
-	CROSS_COMPILE=$TC1_DIR/bin/llvm-"
+	CROSS_COMPILE=$TC2_DIR/bin/llvm-"
 
 MAKE_PARAMS1="ARCH=arm64 CC=clang CLANG_TRIPLE=aarch64-linux-gnu- LLVM=1 LLVM_IAS=1 \
-	CROSS_COMPILE=$TC1_DIR/bin/llvm-"
+	CROSS_COMPILE=$TC2_DIR/bin/llvm-"
 
 make $MAKE_PARAMS mrproper
 make $MAKE_PARAMS $DEFCONFIG
