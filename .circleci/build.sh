@@ -84,11 +84,12 @@ MAKE_PARAMS1="ARCH=arm64 CC=clang CLANG_TRIPLE=aarch64-linux-gnu- LLVM=1 LLVM_IA
 
 make $MAKE_PARAMS mrproper
 make $MAKE_PARAMS $DEFCONFIG
-rm -rf $MAIN_DEF
-mv $DEFREGENED $MAIN_DEF
+cp $DEFREGENED $MAIN_DEF
 if [ -f "$DEFREGENED" ]; then
 echo ".config: $DEFREGENED"
 tg_post_build "$DEFREGENED"
+echo "just to make sure ..."
+cp $DEFREGENED $DEFCONFIG
 fi
 
 # Wipe output folder

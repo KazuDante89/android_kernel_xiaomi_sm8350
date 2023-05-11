@@ -32,7 +32,7 @@ cd ../..
 
 # Clone Kernel Source
 BRANCH="R0.0"
-echo "Downloading Neutron_$BRANCH Kernel Source"
+echo "Downloading Protonic_$BRANCH Kernel Source"
 mkdir $BASE_DIR/Kernel
 KERNEL_SRC="$BASE_DIR"/Kernel
 OUTPUT="$KERNEL_SRC"/out
