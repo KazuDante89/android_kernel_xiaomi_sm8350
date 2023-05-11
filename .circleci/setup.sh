@@ -16,6 +16,7 @@ gsc() {
 echo "Downloading Neutron Clang"
 mkdir "$BASE_DIR"/clang
 TC_DIR="$BASE_DIR"/clang
+TC_BIN="$TC_DIR"/bin
 cd $TC_DIR
 bash <(curl -s https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman) -S=16012023
 echo "$(pwd)"
@@ -46,7 +47,7 @@ gsc https://github.com/ghostrider-reborn/AnyKernel3.git -b lisa $AK3_DIR
 echo "AnyKernel3 Completed"
 
 # Exports
-export  BASE_DIR TC_DIR KERNEL_SRC OUTPUT AK3_DIR BNAME BREV BRANCH TELEGRAM
+export  BASE_DIR TC_DIR TC_BIN KERNEL_SRC OUTPUT AK3_DIR BNAME BREV BRANCH TELEGRAM
 
 # Copy script over to source
 cd $KERNEL_SRC
