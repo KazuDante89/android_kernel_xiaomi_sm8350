@@ -17,11 +17,11 @@ focaltech_touch-y := \
 else
     KDIR = $(OUT)/obj/KERNEL_OBJ
     CROSS_COMPILE = $(ANDROID_TOOLCHAIN)/aarch64-linux-android-
-    CLANG = $(ANDROID_BUILD_TOP)/prebuilts/clang/host/linux-x86/clang-r370808
-    REAL_CC = $(CLANG)/bin/clang
-    AR = $(CLANG)/bin/llvm-ar
-    LLVM_NM = $(CLANG)/bin/llvm-nm
-    LD = $(CLANG)/bin/ld.lld
+    CLANG = $(TC_DIR)
+    REAL_CC = $(TC_DIR)/bin/clang
+    AR = $(TC_DIR)/bin/llvm-ar
+    LLVM_NM = $(TC_DIR)/bin/llvm-nm
+    LD = $(TC_DIR)/bin/ld.lld
 .PHONY: clean
 default:
     $(MAKE_PARAMS)
