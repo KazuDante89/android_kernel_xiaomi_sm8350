@@ -18,7 +18,7 @@ mkdir "$BASE_DIR"/clang
 TC_DIR="$BASE_DIR"/clang
 TC_BIN="$TC_DIR"/bin
 cd $TC_DIR
-bash <(curl -s https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman) -S=16012023
+bash <(curl -s https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman) -S=latest
 echo "$(pwd)"
 cd ../..
 
