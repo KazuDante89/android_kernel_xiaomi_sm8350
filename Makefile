@@ -429,7 +429,7 @@ KBUILD_HOSTLDLIBS   := $(HOST_LFS_LIBS) $(HOSTLDLIBS)
 CPP		= $(CC) -E
 ifneq ($(LLVM),)
 CC		= $(TC_BIN)clang
-LD		= $(TC_DIR)ld
+LD		= $(LD_DIR)
 AR		= $(TC_BIN)llvm-ar
 NM		= $(TC_BIN)llvm-nm
 OBJCOPY		= $(TC_BIN)llvm-objcopy
