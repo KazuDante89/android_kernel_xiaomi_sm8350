@@ -49,7 +49,7 @@ gsc https://github.com/ghostrider-reborn/AnyKernel3.git -b lisa $AK3_DIR
 echo "AnyKernel3 Completed"
 
 # Exports
-export  BASE_DIR TC_DIR TC_BIN KERNEL_SRC OUTPUT AK3_DIR BNAME BREV BRANCH TELEGRAM
+export  BASE_DIR TC_DIR TC_BIN LD_DIR KERNEL_SRC OUTPUT AK3_DIR BNAME BREV BRANCH TELEGRAM
 
 # Copy script over to source
 cd $KERNEL_SRC
