@@ -428,14 +428,14 @@ KBUILD_HOSTLDLIBS   := $(HOST_LFS_LIBS) $(HOSTLDLIBS)
 # Make variables (CC, etc...)
 CPP		= $(CC) -E
 ifneq ($(LLVM),)
-CC		= $(TC_BIN)/clang
-LD		= $(TC_BIN)/ld
-AR		= $(TC_BIN)/llvm-ar
-NM		= $(TC_BIN)/llvm-nm
-OBJCOPY		= $(TC_BIN)/llvm-objcopy
-OBJDUMP		= $(TC_BIN)/llvm-objdump
-READELF		= $(TC_BIN)/llvm-readelf
-STRIP		= $(TC_BIN)/llvm-strip
+CC		= $(TC_BIN)clang
+LD		= $(TC_DIR)ld
+AR		= $(TC_BIN)llvm-ar
+NM		= $(TC_BIN)llvm-nm
+OBJCOPY		= $(TC_BIN)llvm-objcopy
+OBJDUMP		= $(TC_BIN)llvm-objdump
+READELF		= $(TC_BIN)llvm-readelf
+STRIP		= $(TC_BIN)llvm-strip
 else
 CC		= $(CROSS_COMPILE)gcc
 LD		= $(CROSS_COMPILE)ld
