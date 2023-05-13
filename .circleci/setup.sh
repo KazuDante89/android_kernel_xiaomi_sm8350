@@ -13,23 +13,23 @@ gsc() {
 }
 
 # Clone Neutron Clang
-echo "Downloading Neutron Clang"
-mkdir "$BASE_DIR"/clang
-TC_DIR="$BASE_DIR"/clang
-TC_BIN="$TC_DIR"/bin
-cd $TC_DIR
-bash <(curl -s https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman) -S=latest
-echo "$(pwd)"
-cd ../..
-
-# Clone Clang
-# echo "Downloading Clang r450784d"
+# echo "Downloading Neutron Clang"
 # mkdir "$BASE_DIR"/clang
 # TC_DIR="$BASE_DIR"/clang
-# gsc https://gitlab.com/ImSurajxD/clang-r450784d.git $TC_DIR
+# TC_BIN="$TC_DIR"/bin
 # cd $TC_DIR
+# bash <(curl -s https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman) -S=latest
 # echo "$(pwd)"
 # cd ../..
+
+# Clone Clang
+echo "Downloading Clang"
+mkdir "$BASE_DIR"/clang
+TC_DIR="$BASE_DIR"/clang
+gsc https://gitlab.com/lynnnnzx/clang-lyn.git $TC_DIR
+cd $TC_DIR
+echo "$(pwd)"
+cd ../..
 
 # Clone Kernel Source
 BRANCH="R0.0"
