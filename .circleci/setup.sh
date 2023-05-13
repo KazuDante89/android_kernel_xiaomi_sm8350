@@ -26,6 +26,7 @@ gsc() {
 echo "Downloading Clang"
 mkdir "$BASE_DIR"/clang
 TC_DIR="$BASE_DIR"/clang
+TC_BIN="$TC_DIR"/bin/
 gsc https://gitlab.com/lynnnnzx/clang-lyn.git $TC_DIR
 cd $TC_DIR
 echo "$(pwd)"
